@@ -1,5 +1,19 @@
-<header class="container">
-    {{#link-to 'index'}}
-        {{t 'tufar'}}
-    {{/link-to}}
+<header class="container header clearfix">
+    <nav>
+      <ul class="nav nav-pills float-right">
+        {{language-select class="nav-item"}}
+        <li class="nav-item">
+            {{#if session.isAuthenticated}}
+                <a href="#" {{action 'invalidateSession'}}>{{t "button.logout"}}</a>
+            {{else}}
+                {{#link-to "login"}}{{t "button.login"}}{{/link-to}}
+            {{/if}}
+        </li>
+      </ul>
+    </nav>
+    <h3 class="text-muted">
+        {{#link-to 'index'}}
+            {{t 'tufar'}}
+        {{/link-to}}
+    </h3>
 </header>

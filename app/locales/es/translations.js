@@ -39,6 +39,13 @@ export default {
       'edit': 'Editar',
       'remove': 'Remover',
       'confirm': '¿Estas seguro?',
+    },
+
+    'user': {
+        'attributes': {
+            'username': 'Usuario',
+            'password': 'Contraseña'
+        }
     }
 
 };

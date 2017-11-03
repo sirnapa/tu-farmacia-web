@@ -8,6 +8,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('not-found', { path: '/*wildcard' });
+  this.route('login');
 });
 
 export default Router;
