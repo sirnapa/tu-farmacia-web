@@ -25,7 +25,14 @@ module.exports = function(environment) {
 
     i18n: {
       defaultLocale: 'es'
+    },
+
+    'ember-simple-auth': {
+      authenticationRoute: 'login',
+      routeAfterAuthentication: 'index',
+      routeIfAlreadyAuthenticated: 'index'
     }
+
 
   };
 
@@ -35,6 +42,10 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+
+    var host = 'http://localhost:8080';
+    ENV.host = host;
+    ENV.APP.API_HOST = host;
   }
 
   if (environment === 'test') {
@@ -49,7 +60,9 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+      var host = 'http://localhost:8080';
+      ENV.host = host;
+      ENV.APP.API_HOST = host;
   }
 
   return ENV;
