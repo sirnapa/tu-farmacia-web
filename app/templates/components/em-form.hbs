@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-md-10">
+
+    <form {{action 'save' on='submit'}} class="form-horizontal">
+
+      <div class="form-group">
+        {{#if error}}
+          <div class="alert alert-danger" role="alert">
+            {{#each-in error as |key value|}}
+              <strong>{{key}}</strong> {{value}}<br>
+            {{/each-in}}
+          </div>
+        {{/if}}
+      </div>
+
+      {{yield}}
+
+      <div class="form-group">
+        <div class="col-md-8 col-md-offset-4">
+          <button type="submit" class="btn btn-save btn-block">
+              {{t "button.save"}}
+          </button>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+
+</div>

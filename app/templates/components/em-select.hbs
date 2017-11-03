@@ -1,0 +1,17 @@
+<div class="form-group">
+  <label for="{{property}}" class="control-label col-md-4">{{label}}</label>
+  <div class="col-md-8">
+    {{#power-select
+      name=property
+      required=required
+      options=optionEntries
+      placeholder=label
+      selected=(mut (get model property))
+      searchField=contentLabel
+      onchange=(action (mut (get model property)))
+      as |option|
+    }}
+      {{get option contentLabel}}
+    {{/power-select}}
+  </div>
+</div>
