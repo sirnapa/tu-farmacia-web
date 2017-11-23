@@ -37,6 +37,7 @@
     "ember-data": "~2.14.3",
     "ember-export-application-global": "^2.0.0",
     "ember-i18n": "^5.0.2",
+    "ember-leaflet": "^3.0.12",
     "ember-load": "0.0.12",
     "ember-load-initializers": "^1.0.0",
     "ember-moment": "^7.5.0",
@@ -46,6 +47,7 @@
     "ember-simple-auth": "^1.4.0",
     "ember-source": "~2.14.0",
     "ember-truth-helpers": "^2.0.0",
+    "leaflet": "^1.2.0",
     "loader.js": "^4.2.3",
     "popper.js": "^1.12.6"
   },
