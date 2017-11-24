@@ -45,7 +45,24 @@ export default {
     'user': {
         'attributes': {
             'username': 'Usuario',
-            'password': 'Contraseña'
+            'password': 'Contraseña',
+            'enabled': 'Activo',
+            'passwordExpired': 'Contraseña expirada',
+            'accountLocked': 'Cuenta bloqueada',
+            'accountExpired': 'Cuenta expirada'
+        },
+        'title': {
+          'index': 'Usuarios',
+          'new': 'Agregar Usuario',
+          'show': 'Mostrar Usuario',
+          'edit': 'Editar Usuario',
+        },
+        'messages': {
+            'save': {
+                'success': 'El usuario ha sido guardado',
+                'error': 'Falló el guardado del usuario',
+                'empty': 'No se encontraron usuarios'
+            }
         }
     },
 

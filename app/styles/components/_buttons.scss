@@ -1,0 +1,55 @@
+/*
+ * Buttons
+ */
+
+.btn{
+    &.btn-new{
+        @extend .btn-lg;
+        @extend .btn-primary;
+        margin-top: 20px;
+    }
+
+    &.btn-show, &.btn-edit, &.btn-remove{
+        @extend .btn-link;
+        width: 80px;
+        margin: 1px 5px;
+        border: 1px solid $color-gray;
+
+        &:hover,
+        &:active,
+        &:focus{
+          background: $color-white;
+          color: $color-gray;
+          text-decoration: none;
+        }
+    }
+
+    &.btn-back{
+        @extend .btn-lg;
+        width: 40px;
+        margin-top: 18px;
+        margin-right: 18px;
+        float: left;
+        position: relative;
+        overflow: hidden;
+        color: transparent;
+
+        &:before{
+            content:"\A";
+            border-style: solid;
+            border-width: 12px 24px 12px 0;
+            border-color: transparent $color-white transparent transparent;
+            position: absolute;
+        }
+    }
+
+    &.btn-save{
+        @extend .btn-lg;
+        @extend .btn-primary;
+    }
+
+    &.btn-facebook{
+        @extend .btn-info;
+        background: $color-facebook;
+    }
+}
