@@ -8,6 +8,14 @@
 .card-edit{
     @extend .container;
     margin-top: 50px;
+
+    .card-body{
+        padding-top: 30px;
+    }
+
+    .card-title{
+        margin-bottom: 30px;
+    }
 }
 
 .pagination{
