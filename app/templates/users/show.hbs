@@ -1,0 +1,82 @@
+<div class="card card-show">
+    <div class="card-body">
+        <div>
+            {{#link-to "users.index" tagName="a" class="btn btn-back"}}
+              {{t "button.back"}}
+            {{/link-to}}
+            <h1 class="card-title">
+                {{t "user.title.show"}}
+            </h1>
+        </div>
+        
+        <div class="form-horizontal">
+          
+          <div class="form-group">
+            <label class="control-label col-md-4">
+                {{t "user.attributes.username"}}
+            </label>
+            <div class="col-md-8">
+              <p class="form-control-static">
+                    {{model.username}}
+              </p>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="control-label col-md-4">
+                {{t "user.attributes.password"}}
+            </label>
+            <div class="col-md-8">
+              <p class="form-control-static">
+                    {{model.password}}
+              </p>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="control-label col-md-4">
+                {{t "user.attributes.enabled"}}
+            </label>
+            <div class="col-md-8">
+              <p class="form-control-static">
+                    {{t model.enabled}}
+                </p>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="control-label col-md-4">
+                {{t "user.attributes.accountExpired"}}
+            </label>
+            <div class="col-md-8">
+              <p class="form-control-static">
+                    {{t model.accountExpired}}
+                </p>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="control-label col-md-4">
+                {{t "user.attributes.accountLocked"}}
+            </label>
+            <div class="col-md-8">
+              <p class="form-control-static">
+                    {{t model.accountLocked}}
+                </p>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="control-label col-md-4">
+                {{t "user.attributes.passwordExpired"}}
+            </label>
+            <div class="col-md-8">
+              <p class="form-control-static">
+                    {{t model.passwordExpired}}
+                </p>
+            </div>
+          </div>
+          
+        </div>
+    </div>
+</div>

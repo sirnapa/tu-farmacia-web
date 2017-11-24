@@ -1,0 +1,15 @@
+{{#em-form action="save" on="submit"}}
+  
+          {{em-input label=(t "user.attributes.username") property="username" model=model}}
+      
+          {{em-input label=(t "user.attributes.password") property="password" model=model}}
+      
+          {{em-input-checkbox label=(t "user.attributes.enabled") property="enabled" model=model}}
+      
+          {{em-input-checkbox label=(t "user.attributes.accountExpired") property="accountExpired" model=model}}
+      
+          {{em-input-checkbox label=(t "user.attributes.accountLocked") property="accountLocked" model=model}}
+      
+          {{em-input-checkbox label=(t "user.attributes.passwordExpired") property="passwordExpired" model=model}}
+      
+{{/em-form}}

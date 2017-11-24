@@ -25,3 +25,20 @@
         {{/link-to}}
     </h3>
 </header>
+
+{{#if (and session.isAuthenticated (has-any session.data.authenticated.roles 'ROLE_ADMIN'))}}
+    <ul class="nav nav-admin justify-content-center">
+      <li class="nav-item">
+          {{#link-to "users" class="nav-link"}}{{t "user.title.index"}}{{/link-to}}
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="Javascript:void(0);">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Javascript:void(0);">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+{{/if}}

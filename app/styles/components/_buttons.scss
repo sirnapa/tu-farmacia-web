@@ -30,6 +30,7 @@
     &.btn-save{
         @extend .btn-lg;
         @extend .btn-primary;
+        cursor: pointer;
     }
 
     &.btn-facebook{
