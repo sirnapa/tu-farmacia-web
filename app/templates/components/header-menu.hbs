@@ -1,7 +1,6 @@
 <header class="container header clearfix">
     <nav>
       <ul class="nav nav-pills">
-        {{language-select class="nav-item"}}
 
         {{#if session.isAuthenticated}}
             <li class="nav-item">
@@ -15,6 +14,8 @@
                 {{#link-to "login" class="nav-link"}}{{t "button.signin"}}{{/link-to}}
             </li>
         {{/if}}
+
+        {{language-select class="nav-item"}}
 
       </ul>
     </nav>
