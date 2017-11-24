@@ -58,10 +58,10 @@ export default {
           'edit': 'Editar Usuario',
         },
         'messages': {
+            'empty': 'No se encontraron usuarios',
             'save': {
                 'success': 'El usuario ha sido guardado',
                 'error': 'Falló el guardado del usuario',
-                'empty': 'No se encontraron usuarios'
             }
         }
     },
@@ -81,16 +81,17 @@ export default {
           'edit': 'Editar Grupo',
         },
         'messages': {
+            'empty': 'No se encontraron grupos',
             'save': {
                 'success': 'El grupo ha sido guardado',
                 'error': 'Falló el guardado del grupo',
-                'empty': 'No se encontraron grupos'
             }
         }
     },
 
     'store': {
         'attributes': {
+            'group': 'Grupo',
             'name': 'Nombre',
             'ruc': 'RUC',
             'address': 'Dirección fiscal',
@@ -106,10 +107,10 @@ export default {
           'edit': 'Editar Tienda',
         },
         'messages': {
+            'empty': 'No se encontraron tiendas',
             'save': {
                 'success': 'La tienda ha sido guardada',
                 'error': 'Falló el guardado de la tienda',
-                'empty': 'No se encontraron tiendas'
             }
         }
     },
