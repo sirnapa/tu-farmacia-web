@@ -1,5 +1,5 @@
 <!-- Main map -->
-{{#leaflet-map lat=lat lng=lng zoom=zoom}}
+{{#leaflet-map lat=lat lng=lng zoom=zoom scrollWheelZoom=scrollWheelZoom}}
   {{tile-layer url="https://api.mapbox.com/styles/v1/sirnapa/cjad3e8b54vjz2rnmbew04lbw/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic2lybmFwYSIsImEiOiJjajczajFwcnowZmk2MndzMHk0YjM4Z3ZzIn0.yT3ExDYvc8c6_Dbn-zJ6Zg"}}
 
   {{#each markers as |marker|}}

@@ -1,11 +1,11 @@
-<a href="#" class="dropdown-toggle language-selector" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+<a href="#" class="dropdown-toggle language-selector nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
   <img class="flag" src="/assets/images/language/{{i18n.locale}}.svg"><span class="locale-name"> {{localeName}}</span>
   <span class="caret"></span>
 </a>
 <ul class="dropdown-menu">
   {{#each locales as |loc|}}
     <li>
-        <a href="#" {{action 'setLocale' loc.id}}>
+        <a href="#" {{action 'setLocale' loc.id}} class="nav-link">
             <img class="flag" src="/assets/images/language/{{loc.id}}.svg">
             {{loc.text}}
         </a>

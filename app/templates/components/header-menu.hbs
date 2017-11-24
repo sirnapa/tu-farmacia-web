@@ -1,14 +1,21 @@
 <header class="container header clearfix">
     <nav>
-      <ul class="nav nav-pills float-right">
+      <ul class="nav nav-pills">
         {{language-select class="nav-item"}}
-        <li class="nav-item">
-            {{#if session.isAuthenticated}}
-                <a href="#" {{action 'invalidateSession'}}>{{t "button.logout"}}</a>
-            {{else}}
-                {{#link-to "login"}}{{t "button.login"}}{{/link-to}}
-            {{/if}}
-        </li>
+
+        {{#if session.isAuthenticated}}
+            <li class="nav-item">
+                <a href="#" class="nav-link" {{action 'invalidateSession'}}>{{t "button.logout"}}</a>
+            </li>
+        {{else}}
+            <li class="nav-item">
+                {{#link-to "login" class="nav-link"}}{{t "button.login"}}{{/link-to}}
+            </li>
+            <li class="nav-item">
+                {{#link-to "login" class="nav-link"}}{{t "button.signin"}}{{/link-to}}
+            </li>
+        {{/if}}
+
       </ul>
     </nav>
     <h3 class="text-muted">

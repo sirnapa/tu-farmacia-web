@@ -19,6 +19,7 @@ export default {
 
     'button': {
         'login': 'Ingresar',
+        'signin': 'Registrarse',
         'home': 'Página Principal',
         'logout': 'Cerrar sesión',
         'new': 'Nuevo',

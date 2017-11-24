@@ -5,11 +5,35 @@
 header{
     margin: 30px 0;
 
+    @include media-breakpoint-down(xs) {
+        padding: 0;
+        margin-top: -5px;
+    }
+
+    h3{
+        @include media-breakpoint-down(xs) {
+            text-align: center;
+        }
+    }
+
     .nav-pills{
-        margin-top: 5px;
+        float: right;
+
+        @include media-breakpoint-down(xs) {
+            width: 100%;
+            float: none;
+            margin-top: 0;
+            margin-bottom: 40px;
+            padding-top: 10px;
+            background: $color-gray;
+        }
 
         li{
-            margin: 0 10px;
+            .locale-name{
+                @include media-breakpoint-down(sm) {
+                    display: none;
+                }
+            }
         }
     }
 }
