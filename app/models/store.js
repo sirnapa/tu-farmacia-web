@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  group: DS.attr('group'),
+  group: DS.belongsTo('group'),
   name: DS.attr('string'),
   address: DS.attr('string'),
   phone: DS.attr('string'),

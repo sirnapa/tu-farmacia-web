@@ -3,7 +3,6 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
     lat: -25.3229494,
     lng: -57.5234882,
-    zoom: 16,
     markers: [
         {
             location: [-25.3214972,-57.522627],

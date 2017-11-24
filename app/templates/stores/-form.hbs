@@ -1,17 +1,20 @@
+{{em-map lat=-25.3229494 lng=-57.5234882 scrollWheelZoom=false}}
+<br><br>
+
 {{#em-form action="save" on="submit"}}
-  
+
           {{em-select label=(t "store.attributes.group") property="group" model=model content="group" contentLabel="nombre" }}
-      
+
           {{em-input label=(t "store.attributes.name") property="name" model=model}}
-      
+
           {{em-input label=(t "store.attributes.address") property="address" model=model}}
-      
+
           {{em-input label=(t "store.attributes.phone") property="phone" model=model}}
-      
+
           {{em-input label=(t "store.attributes.email") property="email" model=model}}
-      
+
           {{em-input-number label=(t "store.attributes.latitude") property="latitude" model=model}}
-      
+
           {{em-input-number label=(t "store.attributes.longitude") property="longitude" model=model}}
-      
+
 {{/em-form}}
