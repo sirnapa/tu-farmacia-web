@@ -47,6 +47,21 @@ export default {
             'username': 'Usuario',
             'password': 'Contraseña'
         }
+    },
+
+    'spot': {
+        'cadenas': {
+            'title': 'Cadenas de farmacias',
+            'content': 'Tenemos más de XXX locales adheridos en todo el país. Buscar locales y comparar precios nunca fue tan fácil.'
+        },
+        'delivery': {
+            'title': 'Delivery',
+            'content': '¡Acercamos los remedios hasta tu casa! Hacer tu pedido nunca fue tan fácil.'
+        },
+        'seguro': {
+            'title': 'Seguro médico',
+            'content': '¿Estás buscando un seguro médico? Quizás te interesen estos planes recomendados.'
+        }
     }
 
 };
