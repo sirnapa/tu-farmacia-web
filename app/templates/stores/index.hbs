@@ -1,0 +1,93 @@
+<div class="card card-index">
+    <div class="card-body">
+        <div>
+            {{#link-to "stores.new" tagName="a" class="float-right btn btn-new" }}
+                {{t "button.new"}}
+            {{/link-to}}
+            <h1 class="card-title">
+                {{t "store.title.index"}}
+            </h1>
+        </div>
+        {{#if model.length}}
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                      <th>
+                        {{t "store.attributes.group"}}
+                      </th>
+                      <th>
+                        {{t "store.attributes.name"}}
+                      </th>
+                      <th>
+                        {{t "store.attributes.address"}}
+                      </th>
+                      <th>
+                        {{t "store.attributes.phone"}}
+                      </th>
+                      <th>
+                        {{t "store.attributes.email"}}
+                      </th>
+                      <th>
+                        {{t "store.attributes.latitude"}}
+                      </th>
+                      <th>
+                        {{t "store.attributes.longitude"}}
+                      </th>
+                      <th class="text-center">
+                      </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each model as |store|}}
+                      <tr>
+                        <td>
+                              {{store.group}}
+                        </td>
+                        <td>
+                              {{store.name}}
+                        </td>
+                        <td>
+                              {{store.address}}
+                        </td>
+                        <td>
+                              {{store.phone}}
+                        </td>
+                        <td>
+                              {{store.email}}
+                        </td>
+                        <td>
+                              {{store.latitude}}
+                        </td>
+                        <td>
+                              {{store.longitude}}
+                        </td>
+                        <td class="text-center">
+                            <div class="btn-group dropdown" role="group" aria-label="Basic example">
+                                {{#link-to "stores.show" store class="btn btn-secondary btn-show"}}
+                                  {{t "action.show"}}
+                                {{/link-to}}
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="stores.{{store.id}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                <div class="dropdown-menu" aria-labelledby="stores.{{store.id}}">
+                                  {{#link-to "stores.edit" store class="dropdown-item btn-edit"}}
+                                    {{t "action.edit"}}
+                                  {{/link-to}}
+                                  <a href="#" {{action "remove" store}} class="dropdown-item btn-remove">
+                                    {{t "action.remove"}}
+                                  </a>
+                                </div>
+                            </div>
+                        </td>
+                      </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+        {{page-numbers content=content}}
+        {{else}}
+            <p id="blankslate">
+                {{t "store.messages.empty"}}
+            </p>
+        {{/if}}
+    </div>
+</div>

@@ -1,0 +1,81 @@
+<div class="card card-index">
+    <div class="card-body">
+        <div>
+            {{#link-to "groups.new" tagName="a" class="float-right btn btn-new" }}
+                {{t "button.new"}}
+            {{/link-to}}
+            <h1 class="card-title">
+                {{t "group.title.index"}}
+            </h1>
+        </div>
+        {{#if model.length}}
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                      <th>
+                        {{t "group.attributes.name"}}
+                      </th>
+                      <th>
+                        {{t "group.attributes.ruc"}}
+                      </th>
+                      <th>
+                        {{t "group.attributes.address"}}
+                      </th>
+                      <th>
+                        {{t "group.attributes.phone"}}
+                      </th>
+                      <th>
+                        {{t "group.attributes.email"}}
+                      </th>
+                      <th class="text-center">
+                      </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each model as |group|}}
+                      <tr>
+                        <td>
+                              {{group.name}}
+                        </td>
+                        <td>
+                              {{group.ruc}}
+                        </td>
+                        <td>
+                              {{group.address}}
+                        </td>
+                        <td>
+                              {{group.phone}}
+                        </td>
+                        <td>
+                              {{group.email}}
+                        </td>
+                        <td class="text-center">
+                            <div class="btn-group dropdown" role="group" aria-label="Basic example">
+                                {{#link-to "groups.show" group class="btn btn-secondary btn-show"}}
+                                  {{t "action.show"}}
+                                {{/link-to}}
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="groups.{{group.id}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                <div class="dropdown-menu" aria-labelledby="groups.{{group.id}}">
+                                  {{#link-to "groups.edit" group class="dropdown-item btn-edit"}}
+                                    {{t "action.edit"}}
+                                  {{/link-to}}
+                                  <a href="#" {{action "remove" group}} class="dropdown-item btn-remove">
+                                    {{t "action.remove"}}
+                                  </a>
+                                </div>
+                            </div>
+                        </td>
+                      </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+        {{page-numbers content=content}}
+        {{else}}
+            <p id="blankslate">
+                {{t "group.messages.empty"}}
+            </p>
+        {{/if}}
+    </div>
+</div>

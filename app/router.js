@@ -20,6 +20,28 @@ Router.map(function() {
       path: ':user_id'
     });
   });
+  this.route('groups', function() {
+    this.route('new');
+
+    this.route('edit', {
+      path: ':group_id/edit'
+    });
+
+    this.route('show', {
+      path: ':group_id'
+    });
+  });
+  this.route('stores', function() {
+    this.route('new');
+
+    this.route('edit', {
+      path: ':store_id/edit'
+    });
+
+    this.route('show', {
+      path: ':store_id'
+    });
+  });
 });
 
 export default Router;

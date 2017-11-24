@@ -66,6 +66,54 @@ export default {
         }
     },
 
+    'group': {
+        'attributes': {
+            'name': 'Nombre',
+            'ruc': 'RUC',
+            'address': 'Dirección fiscal',
+            'phone': 'Teléfono principal',
+            'email': 'Correo principal'
+        },
+        'title': {
+          'index': 'Grupos',
+          'new': 'Agregar Grupo',
+          'show': 'Mostrar Grupo',
+          'edit': 'Editar Grupo',
+        },
+        'messages': {
+            'save': {
+                'success': 'El grupo ha sido guardado',
+                'error': 'Falló el guardado del grupo',
+                'empty': 'No se encontraron grupos'
+            }
+        }
+    },
+
+    'store': {
+        'attributes': {
+            'name': 'Nombre',
+            'ruc': 'RUC',
+            'address': 'Dirección fiscal',
+            'phone': 'Teléfono principal',
+            'email': 'Correo principal',
+            'latitude': 'Latitud',
+            'longitude': 'Longitud'
+        },
+        'title': {
+          'index': 'Tienda',
+          'new': 'Agregar Tienda',
+          'show': 'Mostrar Tienda',
+          'edit': 'Editar Tienda',
+        },
+        'messages': {
+            'save': {
+                'success': 'La tienda ha sido guardada',
+                'error': 'Falló el guardado de la tienda',
+                'empty': 'No se encontraron tiendas'
+            }
+        }
+    },
+
     'spot': {
         'cadenas': {
             'title': 'Cadenas de farmacias',

@@ -1,0 +1,71 @@
+<div class="card card-show">
+    <div class="card-body">
+        <div>
+            {{#link-to "groups.index" tagName="a" class="btn btn-back"}}
+              {{t "button.back"}}
+            {{/link-to}}
+            <h1 class="card-title">
+                {{t "group.title.show"}}
+            </h1>
+        </div>
+
+        <div class="form-horizontal">
+          
+          <div class="form-group row">
+            <label class="control-label col-md-4 text-right">
+                {{t "group.attributes.name"}}
+            </label>
+            <div class="col-md-8">
+              <p class="form-control-static">
+                    {{model.name}}
+              </p>
+            </div>
+          </div>
+          
+          <div class="form-group row">
+            <label class="control-label col-md-4 text-right">
+                {{t "group.attributes.ruc"}}
+            </label>
+            <div class="col-md-8">
+              <p class="form-control-static">
+                    {{model.ruc}}
+              </p>
+            </div>
+          </div>
+          
+          <div class="form-group row">
+            <label class="control-label col-md-4 text-right">
+                {{t "group.attributes.address"}}
+            </label>
+            <div class="col-md-8">
+              <p class="form-control-static">
+                    {{model.address}}
+              </p>
+            </div>
+          </div>
+          
+          <div class="form-group row">
+            <label class="control-label col-md-4 text-right">
+                {{t "group.attributes.phone"}}
+            </label>
+            <div class="col-md-8">
+              <p class="form-control-static">
+                    {{model.phone}}
+              </p>
+            </div>
+          </div>
+          
+          <div class="form-group row">
+            <label class="control-label col-md-4 text-right">
+                {{t "group.attributes.email"}}
+            </label>
+            <div class="col-md-8">
+              <p class="form-control-static">
+                    {{model.email}}
+              </p>
+            </div>
+          </div>
+          
+        </div>
+    </div>
+</div>
