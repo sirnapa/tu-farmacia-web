@@ -18,6 +18,8 @@
 }
 
 .pagination{
+    @extend .justify-content-center;
+    
     li{
         @extend .page-item;
 

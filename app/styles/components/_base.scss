@@ -2,16 +2,20 @@
  * Base
  */
 
- body{
+body{
     //  background: $color-black;
     //  color: $color-white;
- }
+}
 
- img.flag{
+img.flag{
     width: 25px;
     max-width: 100%;
 }
 
 footer{
     margin: 50px 0 30px;
+}
+
+.form-check{
+    margin: 25px 0;
 }
