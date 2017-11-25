@@ -38,5 +38,13 @@ header{
 
 .nav-admin{
     padding: 15px 0;
-    background: $color-gray;
+    @extend .bg-primary;
+
+    a:not(:hover){
+        color: $color-white !important;
+    }
+
+    a:hover{
+        background: $color-white;
+    }
 }
