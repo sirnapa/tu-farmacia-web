@@ -6,7 +6,6 @@
 .card-show,
 .card-new,
 .card-edit{
-    @extend .container;
     margin-top: 50px;
 
     .card-body{

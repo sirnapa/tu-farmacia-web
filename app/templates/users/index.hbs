@@ -1,81 +1,79 @@
 <div class="card card-index">
     <div class="card-body">
-        <div>
-            {{#link-to "users.new" tagName="a" class="float-right btn btn-new" }}
-                {{t "button.new"}}
-            {{/link-to}}
-            <h1 class="card-title">
-                {{t "user.title.index"}}
-            </h1>
-        </div>
-        {{#if model.length}}
-        <div class="table-responsive">
-            <table class="table table-bordered table-striped">
-                <thead>
-                    <tr>
-                      <th>
-                        {{t "user.attributes.username"}}
-                      </th>
-                      <th>
-                        {{t "user.attributes.enabled"}}
-                      </th>
-                      <th>
-                        {{t "user.attributes.accountExpired"}}
-                      </th>
-                      <th>
-                        {{t "user.attributes.accountLocked"}}
-                      </th>
-                      <th>
-                        {{t "user.attributes.passwordExpired"}}
-                      </th>
-                      <th class="text-center">
-                      </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {{#each model as |user|}}
-                      <tr>
-                        <td>
-                              {{user.username}}
-                        </td>
-                        <td>
-                              {{t user.enabled}}
-                          </td>
-                        <td>
-                              {{t user.accountExpired}}
-                          </td>
-                        <td>
-                              {{t user.accountLocked}}
-                          </td>
-                        <td>
-                              {{t user.passwordExpired}}
-                          </td>
-                        <td class="text-center">
-                            <div class="btn-group dropdown" role="group" aria-label="Basic example">
-                                {{#link-to "users.show" user class="btn btn-secondary btn-show"}}
-                                  {{t "action.show"}}
-                                {{/link-to}}
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="users.{{user.id}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                                <div class="dropdown-menu" aria-labelledby="users.{{user.id}}">
-                                  {{#link-to "users.edit" user class="dropdown-item btn-edit"}}
-                                    {{t "action.edit"}}
-                                  {{/link-to}}
-                                  <a href="#" {{action "remove" user}} class="dropdown-item btn-remove">
-                                    {{t "action.remove"}}
-                                  </a>
-                                </div>
-                            </div>
-                        </td>
-                      </tr>
-                    {{/each}}
-                </tbody>
-            </table>
-        </div>
-        {{page-numbers content=content}}
-        {{else}}
-            <p id="blankslate">
-                {{t "user.messages.empty"}}
-            </p>
-        {{/if}}
+        {{#link-to "users.new" tagName="a" class="float-right btn btn-new" }}
+            {{t "button.new"}}
+        {{/link-to}}
+        <h1 class="card-title">
+            {{t "user.title.index"}}
+        </h1>
     </div>
+    {{#if model.length}}
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                  <th>
+                    {{t "user.attributes.username"}}
+                  </th>
+                  <th>
+                    {{t "user.attributes.enabled"}}
+                  </th>
+                  <th>
+                    {{t "user.attributes.accountExpired"}}
+                  </th>
+                  <th>
+                    {{t "user.attributes.accountLocked"}}
+                  </th>
+                  <th>
+                    {{t "user.attributes.passwordExpired"}}
+                  </th>
+                  <th class="text-center">
+                  </th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each model as |user|}}
+                  <tr>
+                    <td>
+                          {{user.username}}
+                    </td>
+                    <td>
+                          {{t user.enabled}}
+                      </td>
+                    <td>
+                          {{t user.accountExpired}}
+                      </td>
+                    <td>
+                          {{t user.accountLocked}}
+                      </td>
+                    <td>
+                          {{t user.passwordExpired}}
+                      </td>
+                    <td class="text-center">
+                        <div class="btn-group dropdown" role="group" aria-label="Basic example">
+                            {{#link-to "users.show" user class="btn btn-secondary btn-show"}}
+                              {{t "action.show"}}
+                            {{/link-to}}
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="users.{{user.id}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                            <div class="dropdown-menu" aria-labelledby="users.{{user.id}}">
+                              {{#link-to "users.edit" user class="dropdown-item btn-edit"}}
+                                {{t "action.edit"}}
+                              {{/link-to}}
+                              <a href="#" {{action "remove" user}} class="dropdown-item btn-remove">
+                                {{t "action.remove"}}
+                              </a>
+                            </div>
+                        </div>
+                    </td>
+                  </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+    {{page-numbers content=content}}
+    {{else}}
+    <div class="card-body">
+        {{t "user.messages.empty"}}
+    </div>
+    {{/if}}
 </div>
