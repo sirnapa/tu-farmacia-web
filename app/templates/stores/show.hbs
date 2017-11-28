@@ -8,20 +8,29 @@
                 {{t "store.title.show"}}
             </h1>
         </div>
+    </div>
 
+    {{
+        em-map
+            lat=model.latitude
+            lng=model.longitude
+            markers=(array (hash location=(array model.latitude model.longitude)))
+            scrollWheelZoom=false
+    }}
+    <div class="card-body">
         <div class="form-horizontal">
-          
+
           <div class="form-group row">
             <label class="control-label col-md-4 text-right">
                 {{t "store.attributes.group"}}
             </label>
             <div class="col-md-8">
               <p class="form-control-static">
-                    {{model.group}}
+                    {{model.group.name}}
               </p>
             </div>
           </div>
-          
+
           <div class="form-group row">
             <label class="control-label col-md-4 text-right">
                 {{t "store.attributes.name"}}
@@ -32,7 +41,7 @@
               </p>
             </div>
           </div>
-          
+
           <div class="form-group row">
             <label class="control-label col-md-4 text-right">
                 {{t "store.attributes.address"}}
@@ -43,7 +52,7 @@
               </p>
             </div>
           </div>
-          
+
           <div class="form-group row">
             <label class="control-label col-md-4 text-right">
                 {{t "store.attributes.phone"}}
@@ -54,7 +63,7 @@
               </p>
             </div>
           </div>
-          
+
           <div class="form-group row">
             <label class="control-label col-md-4 text-right">
                 {{t "store.attributes.email"}}
@@ -65,7 +74,7 @@
               </p>
             </div>
           </div>
-          
+
           <div class="form-group row">
             <label class="control-label col-md-4 text-right">
                 {{t "store.attributes.latitude"}}
@@ -76,7 +85,7 @@
               </p>
             </div>
           </div>
-          
+
           <div class="form-group row">
             <label class="control-label col-md-4 text-right">
                 {{t "store.attributes.longitude"}}
@@ -87,7 +96,7 @@
               </p>
             </div>
           </div>
-          
+
         </div>
     </div>
 </div>

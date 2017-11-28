@@ -21,6 +21,19 @@
     .card-title{
         margin-bottom: 30px;
     }
+
+    table{
+        thead th,
+        tbody td{
+            &:first-child{
+                border-left-color: transparent;
+            }
+            &:last-child{
+                border-right-color: transparent;
+                width: 140px;
+            }
+        }
+    }
 }
 
 .pagination{

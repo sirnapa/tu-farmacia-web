@@ -1,6 +1,12 @@
-{{em-map lat=-25.3229494 lng=-57.5234882 scrollWheelZoom=false}}
-<br><br>
+{{
+    em-map
+        lat=model.latitude
+        lng=model.longitude
+        markers=(array (hash location=(array model.latitude model.longitude)))
+        scrollWheelZoom=false
+}}
 
+<div class="card-body">
 {{#em-form action="save" on="submit"}}
 
           {{em-select label=(t "store.attributes.group") property="group" model=model content="group" contentLabel="name" }}
@@ -18,3 +24,4 @@
           {{em-input-number label=(t "store.attributes.longitude") property="longitude" model=model}}
 
 {{/em-form}}
+</div>

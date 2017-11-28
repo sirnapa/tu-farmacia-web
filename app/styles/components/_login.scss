@@ -6,6 +6,19 @@
     max-width: 500px;
     margin: 50px auto;
 
+    .brand-logo{
+        width: 25%;
+        max-width: 100px;
+        height: auto;
+        display: block;
+        text-align: center;
+        margin: 0 auto 15px;
+    }
+
+    .alert{
+        margin-bottom: 25px;
+    }
+
     h1{
         text-align: center;
         margin-bottom: 15px;

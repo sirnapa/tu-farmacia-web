@@ -6,6 +6,6 @@ export default DS.Model.extend({
   address: DS.attr('string'),
   phone: DS.attr('string'),
   email: DS.attr('string'),
-  latitude: DS.attr('number'),
-  longitude: DS.attr('number')
+  latitude: DS.attr('number', { defaultValue: -25.3229494 }),
+  longitude: DS.attr('number', { defaultValue: -57.5234882 }),
 });

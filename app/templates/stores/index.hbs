@@ -27,12 +27,6 @@
                   <th>
                     {{t "store.attributes.email"}}
                   </th>
-                  <th>
-                    {{t "store.attributes.latitude"}}
-                  </th>
-                  <th>
-                    {{t "store.attributes.longitude"}}
-                  </th>
                   <th class="text-center">
                   </th>
                 </tr>
@@ -41,7 +35,7 @@
                 {{#each model as |store|}}
                   <tr>
                     <td>
-                          {{store.group}}
+                          {{store.group.name}}
                     </td>
                     <td>
                           {{store.name}}
@@ -54,12 +48,6 @@
                     </td>
                     <td>
                           {{store.email}}
-                    </td>
-                    <td>
-                          {{store.latitude}}
-                    </td>
-                    <td>
-                          {{store.longitude}}
                     </td>
                     <td class="text-center">
                         <div class="btn-group dropdown" role="group" aria-label="Basic example">
