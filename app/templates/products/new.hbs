@@ -1,0 +1,13 @@
+<div class="card card-new">
+    <div class="card-body">
+        <div>
+            {{#link-to "products.index" tagName="a" class="btn btn-back"}}
+              {{t "button.back"}}
+            {{/link-to}}
+            <h1 class="card-title">
+                {{t "product.title.new"}}
+            </h1>
+        </div>
+        {{partial "products/form"}}
+    </div>
+</div>

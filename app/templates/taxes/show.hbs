@@ -1,0 +1,49 @@
+<div class="card card-show">
+    <div class="card-body">
+        <div>
+            {{#link-to "taxes.index" tagName="a" class="btn btn-back"}}
+              {{t "button.back"}}
+            {{/link-to}}
+            <h1 class="card-title">
+                {{t "tax.title.show"}}
+            </h1>
+        </div>
+
+        <div class="form-horizontal">
+          
+          <div class="form-group row">
+            <label class="control-label col-md-4 text-right">
+                {{t "tax.attributes.name"}}
+            </label>
+            <div class="col-md-8">
+              <p class="form-control-static">
+                    {{model.name}}
+              </p>
+            </div>
+          </div>
+          
+          <div class="form-group row">
+            <label class="control-label col-md-4 text-right">
+                {{t "tax.attributes.percent"}}
+            </label>
+            <div class="col-md-8">
+              <p class="form-control-static">
+                    {{model.percent}}
+              </p>
+            </div>
+          </div>
+          
+          <div class="form-group row">
+            <label class="control-label col-md-4 text-right">
+                {{t "tax.attributes.comment"}}
+            </label>
+            <div class="col-md-8">
+              <p class="form-control-static">
+                    {{model.comment}}
+              </p>
+            </div>
+          </div>
+          
+        </div>
+    </div>
+</div>

@@ -42,6 +42,50 @@ Router.map(function() {
       path: ':store_id'
     });
   });
+  this.route('taxes', function() {
+    this.route('new');
+
+    this.route('edit', {
+      path: ':tax_id/edit'
+    });
+
+    this.route('show', {
+      path: ':tax_id'
+    });
+  });
+  this.route('laboratories', function() {
+    this.route('new');
+
+    this.route('edit', {
+      path: ':laboratory_id/edit'
+    });
+
+    this.route('show', {
+      path: ':laboratory_id'
+    });
+  });
+  this.route('tags', function() {
+    this.route('new');
+
+    this.route('edit', {
+      path: ':tag_id/edit'
+    });
+
+    this.route('show', {
+      path: ':tag_id'
+    });
+  });
+  this.route('products', function() {
+    this.route('new');
+
+    this.route('edit', {
+      path: ':product_id/edit'
+    });
+
+    this.route('show', {
+      path: ':product_id'
+    });
+  });
 });
 
 export default Router;

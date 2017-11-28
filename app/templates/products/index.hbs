@@ -1,0 +1,97 @@
+<div class="card card-index">
+    <div class="card-body">
+        {{#link-to "products.new" tagName="a" class="float-right btn btn-new" }}
+            {{t "button.new"}}
+        {{/link-to}}
+        <h1 class="card-title">
+            {{t "product.title.index"}}
+        </h1>
+    </div>
+    {{#if model.length}}
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                  <th>
+                    {{t "product.attributes.name"}}
+                  </th>
+                  <th>
+                    {{t "product.attributes.code"}}
+                  </th>
+                  <th>
+                    {{t "product.attributes.stock"}}
+                  </th>
+                  <th>
+                    {{t "product.attributes.minimalStock"}}
+                  </th>
+                  <th>
+                    {{t "product.attributes.price"}}
+                  </th>
+                  <th>
+                    {{t "product.attributes.tax"}}
+                  </th>
+                  <th>
+                    {{t "product.attributes.expiration"}}
+                  </th>
+                  <th>
+                    {{t "product.attributes.freeSale"}}
+                  </th>
+                  <th class="text-center">
+                  </th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each model as |product|}}
+                  <tr>
+                    <td>
+                          {{product.name}}
+                    </td>
+                    <td>
+                          {{product.code}}
+                    </td>
+                    <td>
+                          {{product.stock}}
+                    </td>
+                    <td>
+                          {{product.minimalStock}}
+                    </td>
+                    <td>
+                          {{product.price}}
+                    </td>
+                    <td>
+                          {{product.tax.name}}
+                    </td>
+                    <td>
+                          {{product.expiration}}
+                    </td>
+                    <td>
+                          {{t product.freeSale}}
+                      </td>
+                    <td class="text-center">
+                        <div class="btn-group dropdown" role="group" aria-label="Basic example">
+                            {{#link-to "products.show" product class="btn btn-secondary btn-show"}}
+                              {{t "action.show"}}
+                            {{/link-to}}
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="products.{{product.id}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                            <div class="dropdown-menu" aria-labelledby="products.{{product.id}}">
+                              {{#link-to "products.edit" product class="dropdown-item btn-edit"}}
+                                {{t "action.edit"}}
+                              {{/link-to}}
+                              <a href="#" {{action "remove" product}} class="dropdown-item btn-remove">
+                                {{t "action.remove"}}
+                              </a>
+                            </div>
+                        </div>
+                    </td>
+                  </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+    {{page-numbers content=content}}
+    {{else}}
+    <div class="card-body blankslate">
+        {{t "product.messages.empty"}}
+    </div>
+    {{/if}}
+</div>

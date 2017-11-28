@@ -1,0 +1,14 @@
+<div class="card card-edit">
+    <div class="card-body">
+        <div>
+            {{#link-to "laboratories.index" tagName="a" class="btn btn-back"}}
+              {{t "button.back"}}
+            {{/link-to}}
+            <h1 class="card-title">
+                {{t "laboratory.title.edit"}}
+            </h1>
+        </div>
+
+        {{partial "laboratories/form"}}
+    </div>
+</div>

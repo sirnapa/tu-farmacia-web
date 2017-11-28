@@ -1,0 +1,67 @@
+<div class="card card-index">
+    <div class="card-body">
+        {{#link-to "taxes.new" tagName="a" class="float-right btn btn-new" }}
+            {{t "button.new"}}
+        {{/link-to}}
+        <h1 class="card-title">
+            {{t "tax.title.index"}}
+        </h1>
+    </div>
+    {{#if model.length}}
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                  <th>
+                    {{t "tax.attributes.name"}}
+                  </th>
+                  <th>
+                    {{t "tax.attributes.percent"}}
+                  </th>
+                  <th>
+                    {{t "tax.attributes.comment"}}
+                  </th>
+                  <th class="text-center">
+                  </th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each model as |tax|}}
+                  <tr>
+                    <td>
+                          {{tax.name}}
+                    </td>
+                    <td>
+                          {{tax.percent}}
+                    </td>
+                    <td>
+                          {{tax.comment}}
+                    </td>
+                    <td class="text-center">
+                        <div class="btn-group dropdown" role="group" aria-label="Basic example">
+                            {{#link-to "taxes.show" tax class="btn btn-secondary btn-show"}}
+                              {{t "action.show"}}
+                            {{/link-to}}
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="taxes.{{tax.id}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                            <div class="dropdown-menu" aria-labelledby="taxes.{{tax.id}}">
+                              {{#link-to "taxes.edit" tax class="dropdown-item btn-edit"}}
+                                {{t "action.edit"}}
+                              {{/link-to}}
+                              <a href="#" {{action "remove" tax}} class="dropdown-item btn-remove">
+                                {{t "action.remove"}}
+                              </a>
+                            </div>
+                        </div>
+                    </td>
+                  </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+    {{page-numbers content=content}}
+    {{else}}
+    <div class="card-body blankslate">
+        {{t "tax.messages.empty"}}
+    </div>
+    {{/if}}
+</div>

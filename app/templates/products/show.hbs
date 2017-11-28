@@ -1,0 +1,104 @@
+<div class="card card-show">
+    <div class="card-body">
+        <div>
+            {{#link-to "products.index" tagName="a" class="btn btn-back"}}
+              {{t "button.back"}}
+            {{/link-to}}
+            <h1 class="card-title">
+                {{t "product.title.show"}}
+            </h1>
+        </div>
+
+        <div class="form-horizontal">
+
+          <div class="form-group row">
+            <label class="control-label col-md-4 text-right">
+                {{t "product.attributes.name"}}
+            </label>
+            <div class="col-md-8">
+              <p class="form-control-static">
+                    {{model.name}}
+              </p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="control-label col-md-4 text-right">
+                {{t "product.attributes.code"}}
+            </label>
+            <div class="col-md-8">
+              <p class="form-control-static">
+                    {{model.code}}
+              </p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="control-label col-md-4 text-right">
+                {{t "product.attributes.stock"}}
+            </label>
+            <div class="col-md-8">
+              <p class="form-control-static">
+                    {{model.stock}}
+              </p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="control-label col-md-4 text-right">
+                {{t "product.attributes.minimalStock"}}
+            </label>
+            <div class="col-md-8">
+              <p class="form-control-static">
+                    {{model.minimalStock}}
+              </p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="control-label col-md-4 text-right">
+                {{t "product.attributes.price"}}
+            </label>
+            <div class="col-md-8">
+              <p class="form-control-static">
+                    {{model.price}}
+              </p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="control-label col-md-4 text-right">
+                {{t "product.attributes.tax"}}
+            </label>
+            <div class="col-md-8">
+              <p class="form-control-static">
+                    {{model.tax.name}}
+              </p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="control-label col-md-4 text-right">
+                {{t "product.attributes.expiration"}}
+            </label>
+            <div class="col-md-8">
+              <p class="form-control-static">
+                    {{model.expiration}}
+              </p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="control-label col-md-4 text-right">
+                {{t "product.attributes.freeSale"}}
+            </label>
+            <div class="col-md-8">
+              <p class="form-control-static">
+                    {{t model.freeSale}}
+                </p>
+            </div>
+          </div>
+
+        </div>
+    </div>
+</div>

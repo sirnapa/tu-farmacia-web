@@ -1,0 +1,85 @@
+<div class="card card-index">
+    <div class="card-body">
+        {{#link-to "laboratories.new" tagName="a" class="float-right btn btn-new" }}
+            {{t "button.new"}}
+        {{/link-to}}
+        <h1 class="card-title">
+            {{t "laboratory.title.index"}}
+        </h1>
+    </div>
+    {{#if model.length}}
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                  <th>
+                    {{t "laboratory.attributes.name"}}
+                  </th>
+                  <th>
+                    {{t "laboratory.attributes.ruc"}}
+                  </th>
+                  <th>
+                    {{t "laboratory.attributes.alias"}}
+                  </th>
+                  <th>
+                    {{t "laboratory.attributes.phone"}}
+                  </th>
+                  <th>
+                    {{t "laboratory.attributes.email"}}
+                  </th>
+                  <th>
+                    {{t "laboratory.attributes.comment"}}
+                  </th>
+                  <th class="text-center">
+                  </th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each model as |laboratory|}}
+                  <tr>
+                    <td>
+                          {{laboratory.name}}
+                    </td>
+                    <td>
+                          {{laboratory.ruc}}
+                    </td>
+                    <td>
+                          {{laboratory.alias}}
+                    </td>
+                    <td>
+                          {{laboratory.phone}}
+                    </td>
+                    <td>
+                          {{laboratory.email}}
+                    </td>
+                    <td>
+                          {{laboratory.comment}}
+                    </td>
+                    <td class="text-center">
+                        <div class="btn-group dropdown" role="group" aria-label="Basic example">
+                            {{#link-to "laboratories.show" laboratory class="btn btn-secondary btn-show"}}
+                              {{t "action.show"}}
+                            {{/link-to}}
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="laboratories.{{laboratory.id}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                            <div class="dropdown-menu" aria-labelledby="laboratories.{{laboratory.id}}">
+                              {{#link-to "laboratories.edit" laboratory class="dropdown-item btn-edit"}}
+                                {{t "action.edit"}}
+                              {{/link-to}}
+                              <a href="#" {{action "remove" laboratory}} class="dropdown-item btn-remove">
+                                {{t "action.remove"}}
+                              </a>
+                            </div>
+                        </div>
+                    </td>
+                  </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+    {{page-numbers content=content}}
+    {{else}}
+    <div class="card-body blankslate">
+        {{t "laboratory.messages.empty"}}
+    </div>
+    {{/if}}
+</div>

@@ -1,0 +1,19 @@
+{{#em-form action="save" on="submit"}}
+
+          {{em-input label=(t "product.attributes.name") property="name" model=model}}
+
+          {{em-input label=(t "product.attributes.code") property="code" model=model}}
+
+          {{em-input-number label=(t "product.attributes.stock") property="stock" model=model}}
+
+          {{em-input-number label=(t "product.attributes.minimalStock") property="minimalStock" model=model}}
+
+          {{em-input-number label=(t "product.attributes.price") property="price" model=model}}
+
+          {{em-select label=(t "product.attributes.tax") property="tax" model=model content="tax" contentLabel="name" }}
+
+          {{em-input label=(t "product.attributes.expiration") property="expiration" model=model}}
+
+          {{em-input-checkbox label=(t "product.attributes.freeSale") property="freeSale" model=model}}
+
+{{/em-form}}
